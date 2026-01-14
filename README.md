@@ -1,1 +1,1 @@
-# azure-secure-web-app
+Secure Azure Web App with Managed Identity and DevSecOps pipeline

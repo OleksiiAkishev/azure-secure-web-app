@@ -14,8 +14,8 @@ Secure Azure Web App with Managed Identity and DevSecOps pipeline
 8. Learned how to efficiently use commands for Dockerfile to not create redundant layers and whereever is possible to merge logically commands in one integrity.
 9. Learned about runtime net core layer in Dockerfile. 
 10. Learned how to build docker compose, why it is needed(instead of using huge run commands with argumets when run a dockerfile) and where to put it (root of the project).
-
-
+11. Learned on volumes mappings: [source path on wsl] : [destination path in container] : [permissions]
+12. Removed old docker.io packages and old docker compose, after installed a new Compose v2 and buildx, + added official docker repo
 Learned how to use vim editor in 3 basic modes [visual, insert, normal]
 
 

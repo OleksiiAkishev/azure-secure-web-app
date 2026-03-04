@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   az-sec-web-api-service:
     build:
@@ -9,3 +8,6 @@ services:
       - "5001:8443"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development # Overwrites the Dockerfile env
+    volumes:
+      - ~/.aspnet/https:/https:ro
+      - ~/.microsoft/usersecrets:/home/appuser/.microsoft/usersecrets:ro    

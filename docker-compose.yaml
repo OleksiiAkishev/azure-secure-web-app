@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  az-sec-web-api-service:
+    build:
+      context: .
+      dockerfile: ./Azure.WebApi/Azure.WebApi/Dockerfile
+    ports:
+      - "8080:8080"
+      - "5001:8443"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development # Overwrites the Dockerfile env

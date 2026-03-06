@@ -1,0 +1,13 @@
+services:
+  web-api-service:
+    build:
+      context: .
+      dockerfile: ./Azure.WebApi/Azure.WebApi/Dockerfile
+    ports:
+      - "8080:8080"
+      - "5001:8443"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development # Overwrites the Dockerfile env
+    volumes:
+      - ~/.aspnet/https:/https:ro
+      - ~/.microsoft/usersecrets:/home/appuser/.microsoft/usersecrets:ro    

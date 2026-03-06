@@ -1,5 +1,5 @@
 services:
-  az-sec-web-api-service:
+  web-api-service:
     build:
       context: .
       dockerfile: ./Azure.WebApi/Azure.WebApi/Dockerfile

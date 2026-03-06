@@ -9,7 +9,10 @@ Secure Azure Web App with Managed Identity and DevSecOps pipeline
     d. where groups are stored in linux [/etc/group/]
     e. where normally local dev certificates are stored for net code apps [.aspnet/]
 
-6. How to generate local dev certificates with the dotnet command with a private key
+6. How to generate local dev certificates with the password
+    6.1 dotnet dev-certs https -ep ~/.aspnet/https/<YourPasswordName>.pfx -p <yourpassword>
+    6.2 Init a new vault for local dev and bind to csproj, e.g., dotnet user-secrets init
+    6.3 Update vault with secrets, e.g., dotnet user-secrets set "Kestrel:Certificates:Default:Password" "YourNewPassword"
 7. Learned which parameter in dot net is responsible for ports mapping [ASPNETCORE_URLS]
 8. Learned how to efficiently use commands for Dockerfile to not create redundant layers and whereever is possible to merge logically commands in one integrity.
 9. Learned about runtime net core layer in Dockerfile. 
